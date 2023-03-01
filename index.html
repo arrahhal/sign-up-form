@@ -42,43 +42,49 @@
           <div class="form-section__paragraph">
             <p>
               This is not real online service! You know you need something like
-              this in your lift to help you realize your deepest dreams. Sign up
-              now to get started. You Know you wnat to.
+              this in your lift to help you realize your deepest dreams.<br> Sign up
+              now to get started.<br><br> You Know you wnat to.
             </p>
           </div>
           <form class="form" id="sign-up-form" action="">
-            <div class="form-section__inputs">
-              <span class="form__heading">Let's do this!</span>
-              <div>
-                <label class="form__label" for="first-name"></label>
-                <input class="form__input" id="first-name" type="text" />
+            <div class="form-section__inputs full-bleed grid">
+              <div class="row flex"><span class="form__heading">Let's do this!</span></div>
+              <div class="row flex">
+                <div>
+                  <label class="form__label" for="first-name">FIRST NAME</label>
+                  <input class="form__input" id="first-name" type="text" />
+                </div>
+                <div>
+                  <label class="form__label" for="last-name">LAST NAME</label>
+                  <input class="form__input" id="last-name" type="text" />
+                </div>
               </div>
-              <div>
-                <label class="form__label" for="last-name"></label>
-                <input class="form__input" id="last-name" type="text" />
+              <div class="row flex">
+                <div>
+                  <label class="form__label" for="email">EMAIL</label>
+                  <input class="form__input" id="email" type="email" />
+                </div>
+                <div>
+                  <label class="form__label" for="phone-num">PHONE NUMBER</label>
+                  <input
+                    class="form__input"
+                    id="phone-num"
+                    inputmode="numeric"
+                    type="text"
+                  />
+                </div>
               </div>
-              <div>
-                <label class="form__label" for="email"></label>
-                <input class="form__input" id="email" type="email" />
+              <div class="row flex">
+                <div>
+                  <label class="form__label" for="password">PASSWORD</label>
+                  <input class="form__input" id="password" type="text" />
+                </div>
+                <div>
+                  <label class="form__label" for="confirm-passowrd">CONFIRM PASSWORD</label>
+                  <input class="form__input" id="confirm-password" type="text" />
+                </div>
+                            </div>
               </div>
-              <div>
-                <label class="form__label" for="phone-num"></label>
-                <input
-                  class="form__input"
-                  id="phone-num"
-                  inputmode="numeric"
-                  type="text"
-                />
-              </div>
-              <div>
-                <label class="form__label" for="password"></label>
-                <input class="form__input" id="password" type="text" />
-              </div>
-              <div>
-                <label class="form__label" for="confirm-passowrd"></label>
-                <input class="form__input" id="confirm-password" type="text" />
-              </div>
-            </div>
             <div class="btn-container">
               <button form="sign-up-form" class="form__button" type="submit">
                 Create Account
