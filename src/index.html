@@ -10,7 +10,10 @@
   <body>
     <div class="container flex">
       <div class="img-div">
-        <div class="img-div__logo"></div>
+        <div class="img-div__logo">
+          <img src="./assets/imgs/odin-lined.png" alt="The Odin Project logo">
+          <span>ODIN</span>
+        </div>
         <footer class="img-div__footer">
           <span
             >Photo by
@@ -27,37 +30,42 @@
         </footer>
       </div>
       <div class="form-div">
-        <p></p>
-        <form action="">
-          <div>
-            <span></span>
+        <p>This is not real online service!
+          You know you need something like this in your lift to help you realize your deepest dreams.
+          Sign up now to get started.
+
+          You Know you wnat to.
+        </p>
+        <form id="sign-up-form" action="">
+          <div class="form-div">
+            <span class="form__heading">Let's do this!</span>
             <div>
-              <label for=""></label>
-              <input id="" type="text" />
+              <label class="form__label" for="first-name"></label>
+              <input class="form__input" id="first-name" type="text" />
             </div>
             <div>
-              <label for=""></label>
-              <input type="text" />
+              <label class="form__label" for="last-name"></label>
+              <input class="form__input" id="last-name" type="text" />
             </div>
             <div>
-              <label for=""></label>
-              <input type="text" />
+              <label class="form__label" for="email"></label>
+              <input class="form__input" id="email" type="email" />
             </div>
             <div>
-              <label for=""></label>
-              <input type="text" />
+              <label class="form__label" for="phone-num"></label>
+              <input class="form__input" id="phone-num" inputmode="numeric" type="text" />
             </div>
             <div>
-              <label for=""></label>
-              <input type="text" />
+              <label class="form__label" for="password"></label>
+              <input class="form__input" id="password" type="text" />
             </div>
             <div>
-              <label for=""></label>
-              <input type="text" />
+              <label class="form__label" for="confirm-passowrd"></label>
+              <input class="form__input" id="confirm-password" type="text" />
             </div>
-            <button type="submit"></button>
           </div>
-          <span></span>
+          <button form="sign-up-form" class="form__button" type="submit">Create Account</button>
+          <span class="form__footer">Already have an account? <span class="login-link">log in</span></span>
         </form>
       </div>
     </div>
