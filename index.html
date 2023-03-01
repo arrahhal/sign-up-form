@@ -4,69 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Sign up form</title>
   </head>
   <body>
     <div class="container flex">
-      <div class="img-div">
-        <div class="img-div__logo">
-          <img src="./assets/imgs/odin-lined.png" alt="The Odin Project logo">
+      <div class="img-section">
+        <div class="img-section__logo flex">
+          <img src="./assets/odin-lined.png" alt="The Odin Project logo" />
           <span>ODIN</span>
         </div>
-        <footer class="img-div__footer">
+        <footer class="img-section__footer">
           <span
             >Photo by
             <a
+              target="_blank"
               href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
               >Halie West</a
             >
             on
             <a
+              target="_blank"
               href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
               >Unsplash</a
             ></span
           >
         </footer>
       </div>
-      <div class="form-div">
-        <p>This is not real online service!
-          You know you need something like this in your lift to help you realize your deepest dreams.
-          Sign up now to get started.
-
-          You Know you wnat to.
-        </p>
-        <form id="sign-up-form" action="">
-          <div class="form-div">
-            <span class="form__heading">Let's do this!</span>
-            <div>
-              <label class="form__label" for="first-name"></label>
-              <input class="form__input" id="first-name" type="text" />
-            </div>
-            <div>
-              <label class="form__label" for="last-name"></label>
-              <input class="form__input" id="last-name" type="text" />
-            </div>
-            <div>
-              <label class="form__label" for="email"></label>
-              <input class="form__input" id="email" type="email" />
-            </div>
-            <div>
-              <label class="form__label" for="phone-num"></label>
-              <input class="form__input" id="phone-num" inputmode="numeric" type="text" />
-            </div>
-            <div>
-              <label class="form__label" for="password"></label>
-              <input class="form__input" id="password" type="text" />
-            </div>
-            <div>
-              <label class="form__label" for="confirm-passowrd"></label>
-              <input class="form__input" id="confirm-password" type="text" />
-            </div>
+      <div class="form-section">
+        <div class="form-section__container">
+          <div class="form-section__paragraph">
+            <p>
+              This is not real online service! You know you need something like
+              this in your lift to help you realize your deepest dreams. Sign up
+              now to get started. You Know you wnat to.
+            </p>
           </div>
-          <button form="sign-up-form" class="form__button" type="submit">Create Account</button>
-          <span class="form__footer">Already have an account? <span class="login-link">log in</span></span>
-        </form>
+          <form class="form" id="sign-up-form" action="">
+            <div class="form-section__inputs">
+              <span class="form__heading">Let's do this!</span>
+              <div>
+                <label class="form__label" for="first-name"></label>
+                <input class="form__input" id="first-name" type="text" />
+              </div>
+              <div>
+                <label class="form__label" for="last-name"></label>
+                <input class="form__input" id="last-name" type="text" />
+              </div>
+              <div>
+                <label class="form__label" for="email"></label>
+                <input class="form__input" id="email" type="email" />
+              </div>
+              <div>
+                <label class="form__label" for="phone-num"></label>
+                <input
+                  class="form__input"
+                  id="phone-num"
+                  inputmode="numeric"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label class="form__label" for="password"></label>
+                <input class="form__input" id="password" type="text" />
+              </div>
+              <div>
+                <label class="form__label" for="confirm-passowrd"></label>
+                <input class="form__input" id="confirm-password" type="text" />
+              </div>
+            </div>
+            <div class="btn-container">
+              <button form="sign-up-form" class="form__button" type="submit">
+                Create Account
+              </button>
+            </div>
+          </form>
+          <div class="login-container">
+            Already have an account?
+            <a href="#">log in</a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
