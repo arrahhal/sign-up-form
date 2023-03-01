@@ -1,7 +1,8 @@
 :root {
   --clr-button: hsl(92, 20%, 35%);
   --clr-neutral-900: hsl(0 0% 100%);
-  --clr-neutral-800: hsl(220 13% 91%);
+  --clr-neutral-800: hsl(0 0% 96%);
+  --clr-neutral-500: hsl(220 13% 91%);
   --clr-neutral-100: hsl(0 0 0);
   --clr-semi-black: hsl(0 0% 0% / 0.5);
 
@@ -12,8 +13,11 @@
   --fw-light: 300;
   --fw-bold: 700;
 
-  --fs-400: 1rem;
+  --fs-300: .9rem;
+  --fs-400: 1.1rem;
   --fs-500: 1.2rem;
+  --fs-600: 1.5rem;
+  --fs-700: 1.7rem;
 }
 
 /***********************************/
@@ -99,10 +103,6 @@ select {
   display: flex;
   gap: var(--gap, 1rem);
 }
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
 
 @font-face {
   font-family: 'Norse';
@@ -113,6 +113,7 @@ select {
 
 body {
   font-family: var(--ff-roboto);
+  font-size: var(--fs-400);
 }
 body > * {
   min-height: 100vh;
@@ -121,15 +122,27 @@ body > * {
 .container {
   --gap: 0rem;
 }
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+  }
+}
 .img-section {
   position: relative;
   flex: 1;
   background-image: url(../assets/halie-west-25xggax4bSA-unsplash.jpg);
   background-size: cover;
   color: var(--clr-neutral-900);
+  z-index: 1;
+}
+@media(max-width: 990px) {
+  .img-section {
+    min-height: 100vh;
+  }
 }
 .img-section__logo {
-  margin-top: min(30%, 30rem);
+  min-width: 240px;
+  margin-top: 10rem;
   background-color: var(--clr-semi-black);
   font-family: var(--ff-norse);
   align-items: center;
@@ -151,22 +164,86 @@ body > * {
   margin-inline: auto;
 }
 .form-section {
-  flex: 2.6;
+  flex: 2.4;
   background-color: var(--clr-neutral-800);
 }
 .form-section__container {
-  margin-inline: 40px;
-  max-width: 60rem;
-  margin-top: 9rem;
+  max-width: min(100% - 8vw, 50rem);
+  margin-inline: 4vw;
+  margin-block: 7rem;
 }
 .form-section__paragraph {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-500);
+  font-size: var(--fs-600);
   padding-bottom: 4rem;
 }
-.inputs-container {
+.form-section__inputs {
   padding-block: 1rem;
   background-color: var(--clr-neutral-900);
-  box-shadow: 0 3px 5px rgb(169, 169, 169);
   padding-bottom: 2rem;
 }
+.full-bleed {
+  box-shadow: 0 0 0 100vmax var(--clr-neutral-900);
+  clip-path: inset(0 -100vmax);
+}
+.form-section__inputs span {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+}
+.form__label {
+  display: block;
+  font-size: var(--fs-300);
+  font-weight: var(--fw-normal);
+  letter-spacing: 1.5px;
+}
+.form__input {
+  width: 17rem;
+  border-radius: 4px;
+  border: 2px solid var(--clr-neutral-800);
+  font-size: var(--fs-500);
+}
+.btn-container {
+  margin-top: 2rem;
+}
+@media(max-width: 600px) {
+  .form__button {
+    margin-inline: auto;
+  }
+}
+.form__button {
+  display: block;
+  padding: 10px 56px;
+  background-color: var(--clr-button);
+  font-weight: var(--fw-bold);
+  color:var(--clr-neutral-900);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-container {
+  margin-top: 2rem;
+}
+@media(max-width: 600px) {
+  .login-container {
+    text-align: center;
+  }
+}
+.login-container a {
+  text-decoration: none;
+  color: var(--clr-button);
+  font-weight: var(--fw-bold);
+}
+.row {
+  --gap: 3vw;
+}
+@media(max-width: 600px) {
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.row + .row {
+  margin-top: 1rem;
+}
+
