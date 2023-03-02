@@ -6,4 +6,4 @@ live preview: [https://rahhaly.github.io/sign-up-form/]
 
 ## Screenshot
 
-[!screenshot](./Screenshot.png)
+![screenshot](./Screenshot.png "Sign up form")
