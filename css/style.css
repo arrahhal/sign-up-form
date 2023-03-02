@@ -7,7 +7,7 @@
   --clr-semi-black: hsl(0 0% 0% / 0.5);
 
   --ff-norse: 'Norse', sans-serif;
-  --ff-roboto: 'Roboto', sans-serif;
+  --ff-poppins: 'Poppins', sans-serif;
 
   --fw-normal: 400;
   --fw-light: 300;
@@ -112,7 +112,7 @@ select {
 /****************************************/
 
 body {
-  font-family: var(--ff-roboto);
+  font-family: var(--ff-poppins);
   font-size: var(--fs-400);
 }
 body > * {
@@ -198,6 +198,7 @@ body > * {
 }
 .form__input {
   width: 17rem;
+  padding: 3px;
   border-radius: 4px;
   border: 2px solid var(--clr-neutral-800);
   font-size: var(--fs-500);
@@ -246,4 +247,16 @@ body > * {
 .row + .row {
   margin-top: 1rem;
 }
-
+.invalid {
+  border: 1px solid red;
+  outline: none;
+}
+.invalid:is(:focus, :active) {
+  outline: 1px solid red;
+}
+.not-match::after {
+  display: block;
+  content: "* Passwords do not match";
+  font-size: var(--fs-300);
+  color: red;
+}
