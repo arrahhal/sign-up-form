@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/main.js" defer></script>
+
     <title>Sign up form</title>
   </head>
   <body>
@@ -42,17 +43,20 @@
           <div class="form-section__paragraph">
             <p>
               This is not real online service! You know you need something like
-              this in your lift to help you realize your deepest dreams.<br> Sign up
-              now to get started.<br><br> You Know you wnat to.
+              this in your lift to help you realize your deepest dreams.<br />
+              Sign up now to get started.<br /><br />
+              You Know you wnat to.
             </p>
           </div>
           <form class="form" id="sign-up-form" action="">
             <div class="form-section__inputs full-bleed grid">
-              <div class="row flex"><span class="form__heading">Let's do this!</span></div>
+              <div class="row flex">
+                <span class="form__heading">Let's do this!</span>
+              </div>
               <div class="row flex">
                 <div>
-                  <label class="form__label" for="first-name">FIRST NAME</label>
-                  <input class="form__input" id="first-name" type="text" />
+                  <label class="form__label" for="first-name">* FIRST NAME</label>
+                  <input class="form__input" id="first-name" type="text" required/>
                 </div>
                 <div>
                   <label class="form__label" for="last-name">LAST NAME</label>
@@ -61,11 +65,13 @@
               </div>
               <div class="row flex">
                 <div>
-                  <label class="form__label" for="email">EMAIL</label>
-                  <input class="form__input" id="email" type="email" />
+                  <label class="form__label" for="email">* EMAIL</label>
+                  <input class="form__input" id="email" type="email" required/>
                 </div>
                 <div>
-                  <label class="form__label" for="phone-num">PHONE NUMBER</label>
+                  <label class="form__label" for="phone-num"
+                    >PHONE NUMBER</label
+                  >
                   <input
                     class="form__input"
                     id="phone-num"
@@ -75,18 +81,25 @@
                 </div>
               </div>
               <div class="row flex">
-                <div>
-                  <label class="form__label" for="password">PASSWORD</label>
-                  <input class="form__input" id="password" type="text" />
+                <div id="not-match">
+                  <label class="form__label" for="password">* PASSWORD</label>
+                  <input class="form__input" id="password" type="password" required/>
                 </div>
                 <div>
-                  <label class="form__label" for="confirm-passowrd">CONFIRM PASSWORD</label>
-                  <input class="form__input" id="confirm-password" type="text" />
+                  <label class="form__label" for="confirm-passowrd"
+                    >* CONFIRM PASSWORD</label
+                  >
+                  <input
+                    class="form__input"
+                    id="confirm-password"
+                    type="password"
+                    required
+                  />
                 </div>
-                            </div>
               </div>
+            </div>
             <div class="btn-container">
-              <button form="sign-up-form" class="form__button" type="submit">
+              <button form="sign-up-form" id="form__button" class="form__button" type="submit">
                 Create Account
               </button>
             </div>
