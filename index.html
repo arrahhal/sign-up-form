@@ -55,8 +55,18 @@
               </div>
               <div class="row flex">
                 <div>
-                  <label class="form__label" for="first-name">* FIRST NAME</label>
-                  <input class="form__input" id="first-name" type="text" required/>
+                  <label class="form__label" for="first-name"
+                    >* FIRST NAME</label
+                  >
+                  <input
+                    class="form__input"
+                    id="first-name"
+                    type="text"
+                    required
+                  />
+                  <p class="form__invalid-mes" id="first-name-invalid">
+                    First name can't be empty
+                  </p>
                 </div>
                 <div>
                   <label class="form__label" for="last-name">LAST NAME</label>
@@ -66,7 +76,16 @@
               <div class="row flex">
                 <div>
                   <label class="form__label" for="email">* EMAIL</label>
-                  <input class="form__input" id="email" type="email" required/>
+                  <input
+                    class="form__input"
+                    id="email"
+                    type="email"
+                    pattern=""
+                    required
+                  />
+                  <p id="email-invalid" class="form__invalid-mes">
+                    Enter a valid email ex. john@gmail.com
+                  </p>
                 </div>
                 <div>
                   <label class="form__label" for="phone-num"
@@ -83,7 +102,23 @@
               <div class="row flex">
                 <div id="not-match">
                   <label class="form__label" for="password">* PASSWORD</label>
-                  <input class="form__input" id="password" type="password" required/>
+                  <input
+                    class="form__input"
+                    id="password"
+                    type="password"
+                    pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+                    minlength="8"
+                    required
+                  />
+                  <p class="form__invalid-mes" id="password-pattern-mismatch">
+                    uppercase, lowercase, and numeric characters are required.
+                  </p>
+                  <p class="form__invalid-mes" id="password-confirm-mismatch">
+                    The password does not match the confirmation password.
+                  </p>
+                  <p class="form__invalid-mes" id="password-length-tooshort">
+                    Password must be at least 8 characters long.
+                  </p>
                 </div>
                 <div>
                   <label class="form__label" for="confirm-passowrd"
@@ -99,7 +134,12 @@
               </div>
             </div>
             <div class="btn-container">
-              <button form="sign-up-form" id="form__button" class="form__button" type="submit">
+              <button
+                form="sign-up-form"
+                id="form__submit-button"
+                class="form__button"
+                type="submit"
+              >
                 Create Account
               </button>
             </div>

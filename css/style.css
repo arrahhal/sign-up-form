@@ -13,7 +13,7 @@
   --fw-light: 300;
   --fw-bold: 700;
 
-  --fs-300: .9rem;
+  --fs-300: 0.9rem;
   --fs-400: 1.1rem;
   --fs-500: 1.2rem;
   --fs-600: 1.5rem;
@@ -135,7 +135,7 @@ body > * {
   color: var(--clr-neutral-900);
   z-index: 1;
 }
-@media(max-width: 990px) {
+@media (max-width: 990px) {
   .img-section {
     min-height: 100vh;
   }
@@ -147,7 +147,7 @@ body > * {
   font-family: var(--ff-norse);
   align-items: center;
   justify-content: center;
-  --gap: .5rem;
+  --gap: 0.5rem;
 }
 .img-section__logo img {
   display: inline-block;
@@ -203,10 +203,18 @@ body > * {
   border: 2px solid var(--clr-neutral-800);
   font-size: var(--fs-500);
 }
+.form__invalid-mes {
+  display: none;
+  font-size: var(--fs-300);
+  color: red;
+}
+.form__invalid-mes.is-visible {
+  display: block;
+}
 .btn-container {
   margin-top: 2rem;
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .form__button {
     margin-inline: auto;
   }
@@ -216,7 +224,7 @@ body > * {
   padding: 10px 56px;
   background-color: var(--clr-button);
   font-weight: var(--fw-bold);
-  color:var(--clr-neutral-900);
+  color: var(--clr-neutral-900);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -225,7 +233,7 @@ body > * {
 .login-container {
   margin-top: 2rem;
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .login-container {
     text-align: center;
   }
@@ -238,7 +246,7 @@ body > * {
 .row {
   --gap: 3vw;
 }
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .row {
     flex-wrap: wrap;
     justify-content: center;
@@ -247,16 +255,17 @@ body > * {
 .row + .row {
   margin-top: 1rem;
 }
-.invalid {
+.is-invalid {
   border: 1px solid red;
   outline: none;
 }
-.invalid:is(:focus, :active) {
-  outline: 1px solid red;
+.is-valid {
+  border: 1px solid green;
+  outline: none;
 }
-.not-match::after {
-  display: block;
-  content: "* Passwords do not match";
-  font-size: var(--fs-300);
-  color: red;
+.is-valid:is(:focus, :active) {
+  outline: 1px solid green;
+}
+.is-invalid:is(:focus, :active) {
+  outline: 1px solid red;
 }
